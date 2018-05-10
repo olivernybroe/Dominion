@@ -37,5 +37,12 @@ namespace models
             });
             yield return www.SendWebRequest();
         }
+
+        public IEnumerator Leave()
+        {
+            var www = AuthHttp.Delete($"lobbies/{id}/users/current");
+      
+            yield return www.SendWebRequest();
+        }
     }
 }

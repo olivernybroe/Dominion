@@ -195,7 +195,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1315446905}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99809957
+  m_Size: 0.9781376
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -418,7 +418,6 @@ GameObject:
   - component: {fileID: 203845036}
   - component: {fileID: 203845035}
   - component: {fileID: 203845034}
-  - component: {fileID: 203845037}
   m_Layer: 5
   m_Name: Body
   m_TagString: Untagged
@@ -511,25 +510,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &203845037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 203845032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5254fb878cd6549838125005a4127871, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ContentPanel: {fileID: 147411522}
-  ListItemPrefab: {fileID: 1211811037050108, guid: c3dddea0f66fe4a4c9737a0e6d738547,
-    type: 2}
-  RefreshButton: {fileID: 0}
-  AddButton: {fileID: 0}
-  Modal: {fileID: 0}
-  CreateButton: {fileID: 0}
-  AddLobbyTitle: {fileID: 0}
 --- !u!1 &222664140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,9 +1202,9 @@ MonoBehaviour:
   ListItemPrefab: {fileID: 1211811037050108, guid: c3dddea0f66fe4a4c9737a0e6d738547,
     type: 2}
   RefreshButton: {fileID: 1193759210}
-  AddButton: {fileID: 1514996318}
+  AddButton: {fileID: 1375234716}
   Modal: {fileID: 724876721}
-  CreateButton: {fileID: 1375234716}
+  CreateButton: {fileID: 1514996318}
   AddLobbyTitle: {fileID: 222664142}
 --- !u!1 &1181489484
 GameObject:

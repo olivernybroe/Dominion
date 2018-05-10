@@ -32,5 +32,12 @@ namespace services.authentication
             www = SetAuth(www);
             return www;
         }
+        
+        public static UnityWebRequest Delete(string url)
+        {
+            var www = UnityWebRequest.Delete(ApiUrl+url);
+            www = SetAuth(www);
+            return www;
+        }
     }
 }
