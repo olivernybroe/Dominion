@@ -32,14 +32,4 @@ public class LobbyListItemController : MonoBehaviour
 		LobbyController.Instance.Lobby = _lobby;
 		SceneManager.LoadScene("Lobby");
 	}
-	
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 }

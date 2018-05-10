@@ -11,6 +11,10 @@ public class LobbyListController : MonoBehaviour
     public GameObject ContentPanel;
     public GameObject ListItemPrefab;
     public Button RefreshButton;
+    public Button AddButton;
+    public GameObject Modal;
+    public Button CreateButton;
+    public Text AddLobbyTitle;
 
     private Vector2 _defaultAnchorMin;
 
@@ -20,7 +24,10 @@ public class LobbyListController : MonoBehaviour
         var panel = ContentPanel.GetComponent<RectTransform>();
         _defaultAnchorMin= new Vector2(panel.anchorMin.x, panel.anchorMin.y);
         Refresh();
+        Modal.SetActive(false);
         RefreshButton.onClick.AddListener(Refresh);
+        CreateButton.onClick.AddListener(CreateLobby);
+        AddButton.onClick.AddListener(ShowLobbyModal);
     }
 
     public IEnumerator FetchLobbies()
@@ -56,5 +63,19 @@ public class LobbyListController : MonoBehaviour
         
         StartCoroutine(FetchLobbies());
         RefreshButton.enabled = true;
+    }
+
+    private void ShowLobbyModal()
+    {
+        Modal.SetActive(true);
+    }
+
+    private void CreateLobby()
+    {
+        CreateButton.enabled = false;
+        StartCoroutine(models.Lobby.Create(AddLobbyTitle.text));
+        Refresh();
+        Modal.SetActive(false);
+        CreateButton.enabled = true;
     }
 }

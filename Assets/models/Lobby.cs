@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using services.authentication;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -26,6 +27,15 @@ namespace models
         public IEnumerator JoinAsPlayer()
         {
             return Join("players");
+        }
+
+        public static IEnumerator Create(string lobbyName)
+        {
+            var www = AuthHttp.Post("lobbies", new Dictionary<string, string>
+            {
+                {"name", lobbyName}
+            });
+            yield return www.SendWebRequest();
         }
     }
 }

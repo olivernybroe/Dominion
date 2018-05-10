@@ -31,7 +31,6 @@ namespace services.authentication
             var www = UnityWebRequest.Post(ApiUrl+url, data);
             www = SetAuth(www);
             return www;
-            
         }
     }
 }
