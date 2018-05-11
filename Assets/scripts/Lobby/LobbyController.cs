@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Diagnostics;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 
 namespace Lobby
@@ -18,13 +21,13 @@ namespace Lobby
             LobbyTitle.text = global::LobbyController.Instance.Lobby.name;
             StartGameButton.onClick.AddListener(StartGame);
             LeaveLobbyButton.onClick.AddListener(LeaveLobby);
+            StartGameButton.enabled = false;
         }
-
 
         private void StartGame()
         {
             Debug.Log("Starting the game.");
-        }
+        }         
 
         public void LeaveLobby()
         {

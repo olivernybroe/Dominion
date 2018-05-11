@@ -7,7 +7,7 @@ namespace services.authentication
 {
     public static class AuthHttp
     {
-        public const string BaseUrl = "http://dominion-lobby.test/";
+        public const string BaseUrl = "http://lobby.lost-world.dk/";
         public const string ApiUrl = BaseUrl+"api/";
 
         private static UnityWebRequest SetAuth(UnityWebRequest webRequest)

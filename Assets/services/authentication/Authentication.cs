@@ -18,7 +18,7 @@ namespace services.authentication
                     {"password", password},
                     {"grant_type", "password"},
                     {"client_id", "2"},
-                    {"client_secret", "Td7Dl8kTHpJXmHC08ER522bBbzM2mGWXWKAe3h38"}
+                    {"client_secret", "4qy6KzbhgixJCwznQXBDlkPEbBigpY76Exhk1zed"}
                 }
             );
 
